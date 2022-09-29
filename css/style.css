@@ -518,6 +518,7 @@ p {
 }
 
 .form_6 {
+    position: relative;
     font-size: 14px;
     padding: 25px;
     width: 300px;
@@ -550,11 +551,21 @@ p {
     width: auto;
     margin-right: 10px;
 }
-.form_6_fixed-box{
+
+.form_6_fixed-box {
     position: fixed;
     top: 220px;
     right: 100px;
 }
-.form_row .form_5_submit:hover{
-    background-color: #000;
+
+.form_row .form_5_submit:hover,
+.form_6_submit:hover {
+    background-color: #07be51;
+    transition: .3s;
+}
+.closed{
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    cursor: pointer;
 }
