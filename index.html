@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тренувальний сайт з веб-формами. Веб-форми та їх види.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <h1>Форми</h1>
+        </header>
+        <main>
+            <div class="simple-form">
+
+                <h2 class="simple-form__title">01. проста форма</h2>
+                <form class="simple-form__form form" action="index.php">
+                    <p class="form__line"><label class="form__label"><input placeholder="Введіть ім’я" type="text"
+                                name="simple-form_name" class="form__input"></label></p>
+                    <p class="form__line"><label class="form__label"><input placeholder="Email" type="email"
+                                name="simple-form_email" class="form__input"></label></p>
+                    <p class="form__line">
+                        <label class="select__before">
+                            <select class="form__input form__select" name="simlpe-form_city">
+                                <option disabled selected>Ваше місто</option>
+                                <option value="Kyiv">Київ</option>
+                                <option value="Lviv">Львів</option>
+                                <option value="Khm">Хмельницький</option>
+                            </select>
+                        </label>
+                    </p>
+                    <p class="form__line">
+                        <textarea placeholder="Опис" class="form__input form__textarea"></textarea>
+                    </p>
+                    <p class="form__line"><label class="form__label"><input class="form__input form__submit"
+                                type="submit" value="Зареєструватися"></label></p>
+                </form>
+            </div>
+            <hr>
+            <div>
+                <h2 class="simple-form__title">02. елементи</h2>
+                <form class="elements-form" action="index.php">
+                    <div class="delivery">
+                        <p><input class="style-radio" type="radio" checked name="delivery" id="novaPoshta"><label
+                                for="novaPoshta">Нова Пошта</label></p>
+                        <p><input class="style-radio" type="radio" name="delivery" id="kuryear"><label
+                                for="kuryear">Кур’єр</label></p>
+                        <p><input class="style-radio" type="radio" disabled name="delivery" id="samovuviz"><label
+                                for="samovuviz">Самовивіз</label></p>
+                    </div>
+                    <div class="conditions">
+                        <form action="php/check.php" method="post">
+                            <p>
+                                <input id="dohovir" class="style-check" type="checkbox">
+                                <label for="dohovir">Прочитав умови договору</label>
+                            </p>
+                            <p>
+                                <input id="pdv" class="style-check" type="checkbox">
+                                <label for="pdv">Згідний з ПДВ 9%</label>
+                            </p>
+                            <p>
+                                <input id="poshta" class="style-check" disabled type="checkbox">
+                                <label for="poshta">Отримувати новини на ел. пошту</label>
+                            </p>
+                        </form>
+                    </div>
+                    <div class="date">
+
+                    </div>
+                </form>
+            </div>
+
+            </form>
+            <hr>
+            <h2 class="simple-form__title simple-form__title_3">03. стилізовані чекбокси</h2>
+            <form class="form_3" action="index.php" method="post">
+                <div class="radio_container">
+                    <p><input id="man" type="radio" name="form_3_radio"><label class="png_man" for="man">Чоловік</label>
+                    </p>
+                    <p><input id="woman" type="radio" name="form_3_radio"><label class="png_woman"
+                            for="woman">Жінка</label></p>
+                </div>
+                <div class="ckeckbox_container">
+                    <p><input type="checkbox" id="form_3_news"><label class="form_3_our_checkbox"
+                            for="form_3_news">Отримувати новини</label></p>
+                    <p><input type="checkbox" id="form_3_buy"><label class="form_3_our_checkbox" for="form_3_buy">Купити
+                            додому ковбаси</label></p>
+                    <p><input type="checkbox" id="form_3_light"><label class="form_3_our_checkbox"
+                            for="form_3_light">Включити світло</label></p>
+                </div>
+            </form>
+            <hr>
+            <form class="form_4" action="index.php" method="post">
+                <h2 class="simple-form__title simple-form__title_3">04. форма таблицею</h2>
+                <p class="form_title">Заповніть усі необхідні поля</p>
+                <table>
+                    <tr>
+                        <td>
+                            <p class="elements-form ">ФІО:</p>
+                        </td>
+                        <td><label class="form__label"><input class="form_4_input" placeholder="Введіть ім’я"
+                                    type="text" name="simple-form_name" class="form__input"></label></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p class="elements-form ">Пароль:</p>
+                        </td>
+                        <td>
+                            <label><input class="form_4_input" placeholder="Введіть не менше 6 символів"
+                                    type="password"></label></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p class="elements-form ">Місто:</p>
+                        </td>
+                        <td>
+                            <label class="select__before">
+                                <select class="form__input form__select form_4_input" name="simlpe-form_city">
+                                    <option selected>Хмельницький</option>
+                                    <option value="Kyiv">Київ</option>
+                                    <option value="Lviv">Львів</option>
+                                </select>
+                            </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p class="elements-form ">Стать:</p>
+                        </td>
+                        <td>
+                            <label class="form_4_radio"><input type="radio" name="form_4_sex">Чоловік</label>
+                            <label class="form_4_radio"><input type="radio" name="form_4_sex">Жінка</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p class="elements-form ">Фото:</p>
+                        </td>
+                        <td>
+                            <input class="form_4_file" type="file" id="form_4_file">
+                            <label for="form_4_file">Виберіть файл</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p class="elements-form ">Коментарій:</p>
+                        </td>
+                        <td><textarea placeholder="Введіть текст повідомлення"
+                                class="form__input form__textarea"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <label><input class="form_4_submit" type="submit" value="Зареєструватися"></label>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+            <form class="form_5" action="index.php" method="post">
+                <h2 class="simple-form__title">05. форма таблицею</h2>
+                <p class="form_title">Оформлення заявки</p>
+                <div class="form_row">
+                    <p class="form_5_name"><label><span class="form_5_text"> Прізвище та ім’я</span><input
+                                class="form_5_name" type="text"></label>
+                    </p>
+                    <p class="form_5_email"><label><span class="form_5_text">Ел. пошта</span><input class="form_5_name"
+                                type="email"></label></p>
+                    <p class="form_5_phone"><label><span class="form_5_text">Телефон</span><input class="form_5_name"
+                                type="tel"></label>
+                    </p>
+                </div>
+                <div class="form_row">
+                    <span class="row">
+                        <p><label for=""><span class="form_5_text">Країна</span><select class="form_5_name"
+                                    name="simlpe-form_city">
+                                    <option disabled selected>Ваше місто</option>
+                                    <option value="Kyiv">Київ</option>
+                                    <option value="Lviv">Львів</option>
+                                    <option value="Khm">Хмельницький</option>
+                                </select></p>
+                        <p><label for=""><span class="form_5_text">Адреса</span><input class="address"
+                                    type="text"></label></p>
+                    </span>
+                    <span class="row">
+                        <p><label for=""><span class="form_5_text">Місто</span><input class="form_5_name"
+                                    type="text"></label></p>
+                        <p><label for=""><span class="form_5_text">Будинок</span><input class="form_5_name"
+                                    type="text"></label></p>
+                        <p><label for=""><span class="form_5_text">Поштовий індекс</span><input class="form_5_name"
+                                    type="text"></label></p>
+                    </span>
+
+                    <p class="form_5_agree"><label><input type="checkbox">Я погоджуюсь з правилами оплати та доставки
+                            товару</label>
+                    </p>
+                </div>
+                <div class="form_row">
+                    <label><input class="form_5_back" type="button" value="Повернутися назад"></label>
+                    <label><input class="form_5_submit" type="submit" value="Оформити покупку"></label>
+                </div>
+            </form>
+            <div class="form_6_fixed-box">
+                <h2 class="simple-form__title">06. фіксована форма</h2>
+                <form action="index.php" method="post" class="form_6">
+                    <label class="form_6_label"> <span class="form_5_text">Логін</span>
+                        <input type="text">
+                    </label>
+                    <label class="form_6_label"> <span class="form_5_text">Пароль</span>
+                        <input type="text">
+                    </label>
+                    <a href="#" class="form_6_forget">Забули пароль?</a>
+                    <label class="form_6_label form_6_checkbox"><input type="checkbox">Запам’ятати пароль</label>
+                    <label class="form_6_label "><input class="form_6_submit" type="submit"
+                            value="Увійти"></label>
+                </form>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>
